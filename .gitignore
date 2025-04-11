@@ -1,0 +1,9 @@
+node_modules
+.env
+package-*.json
+
+*.log
+logs
+# Ignore the postgres_data directory
+postgres_data
+dist
