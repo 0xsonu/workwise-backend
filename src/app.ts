@@ -5,6 +5,7 @@ import seatRoutes from "./routes/seats";
 import healthRoutes from "./routes/health";
 import logger from "./utils/logger";
 import { Request, Response, NextFunction } from "express";
+import { testConnection } from "./config/db";
 
 // Extend the Error type to include a status property
 interface CustomError extends Error {
@@ -12,6 +13,9 @@ interface CustomError extends Error {
 }
 
 const app = express();
+
+// Initialize connection test
+testConnection();
 
 // Enable CORS for all routes
 app.use(

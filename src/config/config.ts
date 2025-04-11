@@ -6,6 +6,7 @@ dotenv.config();
 const appConfig = () => ({
   NODE_ENV: getEnv("NODE_ENV", "development"),
   PORT: Number(getEnv("PORT", "8000")),
+  POSTGRES_DB_URL: getEnv("POSTGRES_DB_URL"),
   POSTGRES_USER: getEnv("POSTGRES_USER"),
   POSTGRES_PASSWORD: getEnv("POSTGRES_PASSWORD"),
   POSTGRES_DB: getEnv("POSTGRES_DB"),
