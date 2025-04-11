@@ -17,10 +17,10 @@ const app = express();
 // Initialize connection test
 testConnection();
 
-// Enable CORS for all routes
+// Enable CORS for all routes with all origins allowed
 app.use(
   cors({
-    origin: process.env.FRONTEND_URL || "http://localhost:3000",
+    origin: "*", // Allow all origins
     credentials: true,
   })
 );
